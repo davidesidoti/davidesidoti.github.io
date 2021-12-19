@@ -244,15 +244,19 @@ section {
     transform: scale(1.5);
 }
 
+#default-secondary .contact-form * {
+    flex: 0 1;
+}
+
 #default-secondary .contact-form form {
     display: flex;
     flex-direction: column;
 }
 
 #default-secondary .contact-form form label {
+    margin: 30px 0;
     font-weight: 500;
     text-decoration: underline;
-    margin: 30px 0;
 }
 
 #default-secondary .contact-form form input,
