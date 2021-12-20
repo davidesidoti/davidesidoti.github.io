@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37cb4725-eafb-42dc-94f1-0135aace9393" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/photos/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="158c6c52-95e9-4006-9092-b53ff9dbf5fc" />
+        <option name="url" value="https://github.com/davidesidoti/davidesidoti.github.io.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1639937527791</updated>
       <workItem from="1639937531786" duration="1773000" />
+      <workItem from="1640013791987" duration="110000" />
+      <workItem from="1640013981561" duration="90000" />
     </task>
     <servers />
   </component>
