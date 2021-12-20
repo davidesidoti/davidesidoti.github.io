@@ -306,42 +306,42 @@ section {
     flex: 1 1 300px;
 }
 
-.resume .tech {
+.tech {
     display: flex;
     flex-wrap: wrap;
 }
 
-.resume .tech ul {
+.tech ul {
     display: block;
 }
 
-.resume .work-exp {
+.work-exp {
     display: flex;
     flex-wrap: wrap;
 }
 
-.resume .work-exp .work {
+.work-exp .work {
     display: block;
 }
 
-.resume .work h3:nth-child(2) {
+.work h3:nth-child(2) {
     font-weight: 600;
 }
 
-.resume .work p {
+.work p {
     font-size: 18px;
 }
 
-.resume .educations {
+.educations {
     display: flex;
     flex-wrap: wrap;
 }
 
-.resume .educations .education {
+.educations .education {
     display: block;
 }
 
-.resume .education p {
+.education p {
     font-size: 18px;
 }
 /* RESUME PAGE */
