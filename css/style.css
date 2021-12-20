@@ -288,60 +288,60 @@ section {
 /* CONTACT PAGE */
 
 /* RESUME PAGE */
-.section-text {
+.resume .section-text {
     flex: 1;
 }
 
-.section-text a {
+.resume .section-text a {
     color: #62A7AF;
 }
 
-.section-text div {
+.resume .section-text div {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
 
-.section-text div * {
+.resume .section-text div * {
     flex: 1 1 300px;
 }
 
-.tech {
+.resume .tech {
     display: flex;
     flex-wrap: wrap;
 }
 
-.tech ul {
+.resume .tech ul {
     display: block;
 }
 
-.work-exp {
+.resume .work-exp {
     display: flex;
     flex-wrap: wrap;
 }
 
-.work-exp .work {
+.resume .work-exp .work {
     display: block;
 }
 
-.work h3:nth-child(2) {
+.resume .work h3:nth-child(2) {
     font-weight: 600;
 }
 
-.work p {
+.resume .work p {
     font-size: 18px;
 }
 
-.educations {
+.resume .educations {
     display: flex;
     flex-wrap: wrap;
 }
 
-.educations .education {
+.resume .educations .education {
     display: block;
 }
 
-.education p {
+.resume .education p {
     font-size: 18px;
 }
 /* RESUME PAGE */
