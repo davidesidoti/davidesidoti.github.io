@@ -288,21 +288,21 @@ section {
 /* CONTACT PAGE */
 
 /* RESUME PAGE */
-.resume .section-text {
+.section-text {
     flex: 1;
 }
 
-.resume .section-text a {
+.section-text a {
     color: #62A7AF;
 }
 
-.resume .section-text div {
+.section-text div {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
 
-.resume .section-text div * {
+.section-text div * {
     flex: 1 1 300px;
 }
 
