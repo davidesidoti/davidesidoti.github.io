@@ -542,6 +542,7 @@ footer {
     }
 }
 
+/* MOBILE */
 @media screen and (max-width: 670px) {
     #resume {
         padding: 40px 0 0 20px;
@@ -605,4 +606,8 @@ footer {
         transform: rotate(45deg);
         bottom: 14px;
     }
+    #default-secondary .contact-form * {
+        flex: 0;
+    }
 }
+/* MOBILE */
