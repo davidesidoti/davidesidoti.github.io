@@ -512,6 +512,34 @@ section {
 }
 /* TRYHACKME PAGES */
 
+/* PHOTOS PAGE */
+.instacard {
+    border: 1px solid #ccc;
+    width: 614px;
+}
+
+.instacard-image {
+    width: 100%;
+}
+
+.instacard-date {
+    padding: 0 16px;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.instacard-comment-detail {
+    font-weight: 600;
+    padding: 0 16px;
+    margin: 0 0 8px 0;
+}
+
+.instacard-comment-info {
+    float: right;
+    padding: 0 16px;
+}
+/* PHOTOS PAGE */
+
 /* FOOTER SECTION */
 footer {
     background-color: #1D2023;
@@ -608,6 +636,9 @@ footer {
     }
     #default-secondary .contact-form * {
         flex: 0 1;
+        width: 100%;
+    }
+    .instacard {
         width: 100%;
     }
 }
