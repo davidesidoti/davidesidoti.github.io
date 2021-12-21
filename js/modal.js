@@ -1,4 +1,23 @@
 window.onload = function () {
+    /* m42-11-29-21 */
+    var m42_11_29_21_modal = document.getElementsByClassName("m42-11-29-21-modal")[0];
+
+    var m42_11_29_21_img = document.getElementsByClassName("m42-11-29-21-img")[0];
+    var m42_11_29_21_img01 = document.getElementsByClassName("m42-11-29-21-img01")[0];
+    var m42_11_29_21_caption = document.getElementsByClassName("m42-11-29-21-caption")[0];
+    m42_11_29_21_img.onclick = function () {
+        m42_11_29_21_modal.style.display = "block";
+        m42_11_29_21_img01.src = this.src;
+        m42_11_29_21_caption.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("m42-11-29-21-closer")[0];
+
+    span.onclick = function () {
+        m42_11_29_21_modal.style.display = "none";
+    }
+    /* m42-11-29-21 */
+
     /* moon-11-12-21 */
     var moon_11_12_21_modal = document.getElementsByClassName("moon-11-12-21-modal")[0];
 
