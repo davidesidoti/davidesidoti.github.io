@@ -1,4 +1,23 @@
 window.onload = function () {
+    /* moon-11-12-21 */
+    var moon_11_12_21_modal = document.getElementsByClassName("moon-11-12-21-modal")[0];
+
+    var moon_11_12_21_img = document.getElementsByClassName("moon-11-12-21-img")[0];
+    var moon_11_12_21_img01 = document.getElementsByClassName("moon-11-12-21-img01")[0];
+    var moon_11_12_21_caption = document.getElementsByClassName("moon-11-12-21-caption")[0];
+    moon_11_12_21_img.onclick = function () {
+        moon_11_12_21_modal.style.display = "block";
+        moon_11_12_21_img01.src = this.src;
+        moon_11_12_21_caption.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("moon-11-12-21-closer")[0];
+
+    span.onclick = function () {
+        moon_11_12_21_modal.style.display = "none";
+    }
+    /* moon-11-12-21 */
+
     /* andromeda-11-09-21 */
     var andromeda_11_09_21_modal = document.getElementsByClassName("andromeda-11-09-21-modal")[0];
 
