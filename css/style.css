@@ -464,6 +464,10 @@ section {
 /* WORKS PAGE */
 
 /* TUTORIAL PAGE */
+.tutorial-cards {
+    display: block;
+}
+
 .card-th-1 {
     background: url(../images/tutorials/tryhackme/lian-yu.jpg) center;
     background-size: cover;
