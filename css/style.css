@@ -478,6 +478,21 @@ section {
     background: url(../images/tutorials/unity/how-to-move-with-ui-buttons.jpg) center;
     background-size: cover;
 }
+
+.card-u-2 {
+    background: url(../images/tutorials/unity/how-to-jump-with-ui-buttons.jpg) center;
+    background-size: cover;
+}
+
+.card-u-3 {
+    background: url(../images/tutorials/unity/how-to-move-with-ui-buttons-3d.jpg) center;
+    background-size: cover;
+}
+
+.card-u-4 {
+    background: url(../images/tutorials/unity/how-to-jump-with-ui-buttons-3d.jpg) center;
+    background-size: cover;
+}
 /* TUTORIAL PAGE */
 
 /* TRYHACKME PAGES */
