@@ -1,4 +1,42 @@
-$(window).ready(function (){
+window.onload = function () {
+    /* andromeda-11-09-21 */
+    var andromeda_11_09_21_modal = document.getElementsByClassName("andromeda-11-09-21-modal")[0];
+
+    var andromeda_11_09_21_img = document.getElementsByClassName("andromeda-11-09-21-img")[0];
+    var andromeda_11_09_21_img01 = document.getElementsByClassName("andromeda-11-09-21-img01")[0];
+    var andromeda_11_09_21_caption = document.getElementsByClassName("andromeda-11-09-21-caption")[0];
+    andromeda_11_09_21_img.onclick = function () {
+        andromeda_11_09_21_modal.style.display = "block";
+        andromeda_11_09_21_img01.src = this.src;
+        andromeda_11_09_21_caption.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("andromeda-11-09-21-closer")[0];
+
+    span.onclick = function () {
+        andromeda_11_09_21_modal.style.display = "none";
+    }
+    /* andromeda-11-09-21 */
+
+    /* pleiadi-11-02-21 */
+    var pleiadi_11_02_21_modal = document.getElementsByClassName("pleiadi-11-02-21-modal")[0];
+
+    var pleiadi_11_02_21_img = document.getElementsByClassName("pleiadi-11-02-21-img")[0];
+    var pleiadi_11_02_21_img01 = document.getElementsByClassName("pleiadi-11-02-21-img01")[0];
+    var pleiadi_11_02_21_caption = document.getElementsByClassName("pleiadi-11-02-21-caption")[0];
+    pleiadi_11_02_21_img.onclick = function () {
+        pleiadi_11_02_21_modal.style.display = "block";
+        pleiadi_11_02_21_img01.src = this.src;
+        pleiadi_11_02_21_caption.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("pleiadi-11-02-21-closer")[0];
+
+    span.onclick = function () {
+        pleiadi_11_02_21_modal.style.display = "none";
+    }
+    /* pleiadi-11-02-21 */
+
     /* andromeda-11-02-21 */
     var andromeda_11_02_21_modal = document.getElementsByClassName("andromeda-11-02-21-modal")[0];
 
@@ -11,10 +49,10 @@ $(window).ready(function (){
         andromeda_11_02_21_caption.innerHTML = this.alt;
     }
 
-    var span = document.getElementsByClassName("vega-10-31-21-closer")[0];
+    var span = document.getElementsByClassName("andromeda-11-02-21-closer")[0];
 
     span.onclick = function () {
-        vega_10_31_21_modal.style.display = "none";
+        andromeda_11_02_21_modal.style.display = "none";
     }
     /* andromeda-11-02-21 */
 
@@ -55,4 +93,4 @@ $(window).ready(function (){
         andromeda_10_26_21_modal.style.display = "none";
     }
     /* andromeda-10-26-21 */
-});
+}
