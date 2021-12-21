@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lian_Yu Walkthrough - Sidoti Davide</title>
+    <link rel="shortcut icon" href="../../../images/logo_hash_white.png" type="image/PNG">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/660301f226.js"></script>
+    <script referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <script src="../../../js/typewrite.js"></script>
+    <script src="../../../js/responsive.js"></script>
+</head>
+
+<body>
+<!-- navbar section start -->
+<nav class="navbar">
+    <div class="inner-width">
+        <a class="logo" href="../../../index.html">
+            <img alt="logo" src="../../../images/logo_hash_white.png">
+        </a>
+        <button class="menu-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-menu">
+            <a class="nav-link" href="../../../index.html">home</a>
+            <a class="nav-link" href="../../../index.html#default-secondary">about</a>
+            <a class="nav-link" href="../../../resume/index.html">resume</a>
+            <a class="nav-link" href="../../../works/index.html">works</a>
+            <a class="nav-link" href="../../index.html">tutorials</a>
+            <a class="nav-link" href="../../../photos/index.html">photos</a>
+            <a class="nav-link" href="../../../contact/index.html">contact</a>
+        </div>
+    </div>
+</nav>
+<!-- navbar section end -->
+
+<!-- section start -->
+<section id="default-primary">
+    <div class="inner-width">
+        <div class="content">
+            <h1>tutorials</h1>
+            <h2 class="typewrite" data-period="2000"
+                data-type='["tryhackme", "unity", "grey hack", "web development"]'>
+                <span class="wrap"></span>
+            </h2>
+            <div class="buttons">
+                <a href="../../../contact/index.html">contact</a>
+                <a href="../../../index.html#default-secondary">about me</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+<!-- section start -->
+<section id="default-secondary" class="tutorial-section">
+    <div class="inner-width">
+        <h1 class="section-title">Lian_Yu Walkthrough</h1>
+        <div class="section-content">
+            <p>
+                Let's start scanning the machine's IP running the command:
+                <br>
+                <code>
+                    <span class="cyan">nmap</span>
+                    <span class="purple">-p- -T4 -v -A -oN</span>
+                    nmapInfo.txt [IP]
+                </code>
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-1.png" alt="lian-yu-1" class="tutorial-img">
+                <br>
+                Nmap discovered five open ports:
+                <br>
+                <code>
+                    21, 22, 80, 111, 38871
+                </code>
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-2.png" alt="lian-yu-2" class="tutorial-img">
+                <br>
+                The website on port 80 don't seem to give us any clues so let's search for hidden directories with the command:
+                <br>
+                <code>
+                    <span class="cyan">gobuster</span>
+                    dir
+                    <span class="purple">-w</span>
+                    [PATH TO WORDLIST]
+                    <span class="purple">-u</span>
+                    [URL]
+                </code>
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-3.png" alt="lian-yu-3" class="tutorial-img">
+                <br>
+                As we can see, gobuster found an hidden directory:
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-4.png" alt="lian-yu-4" class="tutorial-img">
+                <br>
+                Inspecting the elements on that page we can find an
+                <code>h2</code>
+                tag with color set to white. This will be our FTP username:
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-5.png" alt="lian-yu-5" class="tutorial-img">
+                <br>
+                Scanning again the url adding the folder we found before, we can see a second hidden directory. This is the first answer for the challenge. Let's check it out.
+                <br>
+                Inspecting the page we can see a comment telling us a file extension
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-6.png" alt="lian-yu-6" class="tutorial-img">
+                <br>
+                We can use this extension to do a scansion with gobuster searching for a specified file extension like so:
+                <br>
+                <code>
+                    <span class="cyan">gobuster</span>
+                    dir
+                    <span class="purple">-w</span>
+                    [PATH TO WORDLIST]
+                    <span class="purple">-u</span>
+                    [URL]
+                    <span class="purple">-x</span>
+                    [FILE EXTENSION]
+                </code>
+                <br><br>
+                This scan will give us a file that is the second answer for the challenge.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-7.png" alt="lian-yu-7" class="tutorial-img">
+                <br>
+                Inside that file we will get a token that seems encrypted in <code>Base58</code>.
+                <br><br>
+                What we get decrypting the token is the password for the FTP service. It also is the answer for the third answer.
+                <br>
+                Let's connect to the FTP service running the command:
+                <br>
+                <code>
+                    <span class="cyan">ftp</span>
+                    [IP]
+                </code>
+                <br>
+                and typing the username and password we found.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-8.png" alt="lian-yu-8" class="tutorial-img">
+                <br>
+                Running the command <code>ls</code> wen can find three images.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-9.png" alt="lian-yu-9" class="tutorial-img">
+                <br>
+                Let's download them with the command:
+                <br>
+                <code>
+                    get [FILE]
+                </code>
+                <br><br>
+                Let's go back on the parent folder with the command <code>cd</code>.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-15.png" alt="" class="tutorial-img">
+                <br>
+                Here we can see the other user. We will use this to access the SSH service.
+                <br><br>
+                Now we can check the integrity and the description of the images launching the command:
+                <br>
+                <code>
+                    <span class="cyan">exiftool</span>
+                    [PATH TO IMAGE]
+                </code>
+                <br><br>
+                Looks like the second image is corrupted:
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-10.png" alt="" class="tutorial-img">
+                <br>
+                Let's check the hex dump of the image using the command
+                <br>
+                <code>
+                    <span class="cyan">hexeditor</span>
+                    [PATH TO IMAGE]
+                </code>
+                <br>
+                and see if we can repair it.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-11.png" alt="lian-yu-11" class="tutorial-img">
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-12.png" alt="" class="tutorial-img">
+                <br>
+                As we can see, the first characters are wrong. A normal .png image should start with the characters: <code>.PNG</code>
+                <br>
+                Let's modify the hex code so that we can properly see the image changing the first numbers with these:
+                <br>
+                <code>89 50 4E 47 0D 0A 1A 0A</code>
+                <br><br>
+                Inside the image we can see the password!
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-13.png" alt="lian-yu-13" class="tutorial-img">
+                <br>
+                With this password we can see if there are any files hidden inside the image using the command:
+                <br>
+                <code>
+                    <span class="cyan">steghide</span>
+                    info [PATH TO IMAGE]
+                </code>
+                <br>
+                and entering the password we just found.
+                <br><br>
+                As we can see, there was a zipped file hidden
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-14.png" alt="lian-yu-14" class="tutorial-img">
+                <br>
+                Let's download it typing:
+                <br>
+                <code>
+                    <span class="cyan">steghide</span>
+                    extract
+                    <span class="purple">-sf</span>
+                    [PATH TO FILE]
+                </code>
+                <br><br>
+                Unzip the file with:
+                <br>
+                <code>
+                    <span class="cyan">unzip</span>
+                    [PATH TO FILE]
+                </code>
+                <br><br>
+                Now we got two files. <code>passwd.txt</code> and <code>shado</code>. The first one is not that interesting
+                but in the second file we found the password for the SSH service. It also is the answer for the forth question.
+                <br><br>
+                We can finally access the SSH service with the username and password we found running the command:
+                <br>
+                <code>
+                    <span class="cyan">ssh</span>
+                    [USER]@[IP]
+                </code>
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-16.png" alt="lian-yu-16" class="tutorial-img">
+                <br>
+                Inside the <code>user.txt</code> file we can find the first flag:
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-17.png" alt="lian-yu-17" class="tutorial-img">
+                <br>
+                Running the command
+                <br>
+                <code>
+                    ls -la
+                </code>
+                <br>
+                we can see an hidden file. That file is telling us to search for a specific folder to get the root folder.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-18.png" alt="lian-yu-18" class="tutorial-img">
+                <br>
+                Running the command
+                <br>
+                <code>
+                    sudo -l
+                </code>
+                <br>
+                we can see what the user can run as root.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-19.png" alt="lian-yu-19" class="tutorial-img">
+                <br>
+                Seems like we can run the command <code>pkexec</code> as root. This command allow us to run other commands with root privileges.
+                <br><br>
+                Now we can run the command
+                <br>
+                <code>
+                    sudo /usr/bin/pkexec /bin/bash
+                </code>
+                <br>
+                to get root privileges.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-20.png" alt="lian-yu-20" class="tutorial-img">
+                <br>
+                Now we can access the <code>root.txt</code> file to get the last flag.
+                <br>
+                <img src="../../../images/tutorials/tryhackme/lian-yu/lian-yu-21.png" alt="lian-yu-21" class="tutorial-img">
+                <br>
+                And we are done!
+            </p>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+<!-- footer section start -->
+<footer>
+    <div class="inner-width">
+        <div class="copyright">
+            &copy; 2021 | Created By <a href="../../index.html">Sidoti Davide</a> under the <a href="../../../privacy/index.html">GNU
+            GPLv3</a>.<br>See source for terms and details.
+            <br><br>
+            <div class="nav-links">
+                <a class="nav-link" href="../../../index.html">home</a>
+                <a class="nav-link" href="../../../index.html#default-secondary">about</a>
+                <a class="nav-link" href="../../../resume/index.html">resume</a>
+                <a class="nav-link" href="../../../works/index.html">works</a>
+                <a class="nav-link" href="../../index.html">tutorials</a>
+                <a class="nav-link" href="../../../photos/index.html">photos</a>
+                <a class="nav-link" href="../../../contact/index.html">contact</a>
+            </div>
+            <i class="fas fa-envelope"><a href="mailto:info@sidotidavide.it">info@sidotidavide.it</a></i><br><br>
+            <div class="langbtn">
+                <a href="../../../index.html" style="text-decoration: underline;">English</a>
+                <a href="../../../it/index.html">Italiano</a>
+                <a href="../../../jp/index.html">日本語</a>
+                <a href="../../../cn/index.html">中文</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+</body>
+</html>
