@@ -43,28 +43,31 @@
     <div class="navbar-right">
         <button class="nav-cart" onclick="cartToggler()"><img src="./images/icon-cart.svg" alt="icon-cart"></button>
         <a href="#" class="nav-avatar"><img src="./images/image-avatar.png" alt="image-avatar"></a>
-        <div id="cart" class="cart">
+        <div id="cart" class="cart" style="display: none">
             <div class="cart-title">
                 <p>Cart</p>
             </div>
-            <!--<div class="item">
+            <p id="cart-empty" class="cart-empty" style="display: block">
+                Your cart is empty.
+            </p>
+            <div id="item" class="item" style="display: none">
                 <img class="item-img" src="./images/image-product-1-thumbnail.jpg" alt="item image">
                 <div class="item-info">
                     <div>
                         <p class="item-name">Fall Limited Edition Sneakers</p>
                     </div>
                     <div class="item-price">
-                        <p class="single-price">$120.00 x 3</p>
-                        <p class="total-price">$375.00</p>
+                        <p id="price-string" class="single-price">$125.00 x <span id="price-number"></span></p>
+                        <p id="total-price" class="total-price">$375.00</p>
                     </div>
                 </div>
                 <div class="remove-item">
-                    <button>
+                    <button onclick="removeItem()">
                         <img src="./images/icon-delete.svg" alt="icon-delete">
                     </button>
                 </div>
-            </div>-->
-            <div class="checkout">
+            </div>
+            <div id="checkout" class="checkout" style="display: none">
                 <button>Checkout</button>
             </div>
         </div>
@@ -89,7 +92,7 @@
         <p class="product-info">These low-profile sneakers are your perfect casual wear companion. Featuring a
             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         <div class="product-price-info">
-            <h2 class="price">$125.00</h2>
+            <h2 id="price" class="price">$125.00</h2>
             <p class="discount">50%</p>
         </div>
         <p class="prev-price">$250.00</p>

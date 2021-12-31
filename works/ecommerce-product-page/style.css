@@ -101,6 +101,10 @@ button {
 .cart-title p {
     font-weight: 700;
 }
+.cart-empty {
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);
+}
 .item {
     display: flex;
     align-items: center;
