@@ -196,6 +196,87 @@ button {
     opacity: 40%;
 }
 
+.thumbnail-img .thumb-selected {
+    opacity: 40%;
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsla(0, 0%, 0%, 75%);
+    padding-top: 12%;
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    transition: .2s linear;
+}
+
+.close:hover,
+.close:focus {
+    color: hsl(26, 100%, 55%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slide img {
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-size: 20px;
+    transition: .2s linear;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.next {
+    right: 0
+}
+
+.lightbox-thumb {
+    display: flex;
+    justify-content: center;
+}
+
+.lightbox-thumb img {
+    margin: 0 15px;
+    width: 8%;
+    border-radius: 10px;
+}
+
 .product-text {
     display: flex;
     justify-content: center;

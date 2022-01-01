@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="./js/cart-controller.js"></script>
+    <script src="./js/modal-controller.js"></script>
+    <script src="./js/lightbox-controller.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -75,15 +77,40 @@
 </nav>
 
 <section id="home">
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <div class="slide">
+                <img src="./images/image-product-1.jpg" alt="image-product-1">
+            </div>
+
+            <!-- NEXT / PREVIOUS CONTROLS -->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <!-- NEXT / PREVIOUS CONTROLS -->
+
+            <!-- THUMBNAIL IMAGE CONTROLS -->
+            <div class="lightbox-thumb">
+                <img onclick="lightSelectOne()" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="light-thumb" id="light1">
+                <img onclick="lightSelectTwo()" src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="light-thumb" id="light2">
+                <img onclick="lightSelectThree()" src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="light-thumb" id="light3">
+                <img onclick="lightSelectFour()" src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="light-thumb" id="light4">
+            </div>
+            <!-- THUMBNAIL IMAGE CONTROLS -->
+        </div>
+    </div>
+    <!-- LIGHTBOX -->
+
     <div class="home-images">
         <div class="selected-img">
-            <img src="./images/image-product-1.jpg" alt="image-product-1">
+            <img id="modal-shown-image" src="" alt="">
         </div>
         <div class="thumbnail-img">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" id="img1">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" id="img2">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" id="img3">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" id="img4">
+            <img onclick="modalSelectOne()" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" id="img1">
+            <img onclick="modalSelectTwo()" src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" id="img2">
+            <img onclick="modalSelectThree()" src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" id="img3">
+            <img onclick="modalSelectFour()" src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" id="img4">
         </div>
     </div>
     <div class="product-text">
