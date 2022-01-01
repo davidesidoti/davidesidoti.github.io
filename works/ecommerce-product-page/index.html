@@ -79,10 +79,10 @@
 <section id="home">
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeLightBox()">&times;</span>
         <div class="lightbox-content">
             <div class="slide">
-                <img src="./images/image-product-1.jpg" alt="image-product-1">
+                <img id="light-shown-image" src="" alt="image-product-1">
             </div>
 
             <!-- NEXT / PREVIOUS CONTROLS -->
@@ -104,7 +104,7 @@
 
     <div class="home-images">
         <div class="selected-img">
-            <img id="modal-shown-image" src="" alt="">
+            <img id="modal-shown-image" src="" alt="" onclick="showLightBox()">
         </div>
         <div class="thumbnail-img">
             <img onclick="modalSelectOne()" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" id="img1">

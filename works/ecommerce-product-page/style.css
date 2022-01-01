@@ -202,6 +202,7 @@ button {
 }
 
 .lightbox {
+    display: none;
     position: fixed;
     z-index: 1001;
     left: 0;
@@ -271,10 +272,21 @@ button {
     justify-content: center;
 }
 
+.lightbox-thumb .light-selected {
+    opacity: 40%;
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
 .lightbox-thumb img {
     margin: 0 15px;
     width: 8%;
     border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.lightbox-thumb img:hover {
+    opacity: 40%;
 }
 
 .product-text {
