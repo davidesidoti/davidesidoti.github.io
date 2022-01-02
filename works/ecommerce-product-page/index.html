@@ -11,10 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/660301f226.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="./js/cart-controller.js"></script>
     <script src="./js/modal-controller.js"></script>
     <script src="./js/lightbox-controller.js"></script>
+    <script src="./js/responsive-controller.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -22,8 +24,11 @@
         <div class="logo">
             <a href="#"><img src="./images/logo.svg" alt="logo"></a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
             <ul>
+                <button onclick="closeMenu()" class="close-menu" id="close-menu">
+                    &times;
+                </button>
                 <a href="#">
                     <li>Collections</li>
                 </a>
@@ -41,6 +46,9 @@
                 </a>
             </ul>
         </div>
+        <button onclick="showMenu()" class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </div>
     <div class="navbar-right">
         <button class="nav-cart" onclick="cartToggler()"><img src="./images/icon-cart.svg" alt="icon-cart"></button>
@@ -86,8 +94,8 @@
             </div>
 
             <!-- NEXT / PREVIOUS CONTROLS -->
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
+            <a onclick="prevSlide()" class="prev">&#10094;</a>
+            <a onclick="nextSlide()" class="next">&#10095;</a>
             <!-- NEXT / PREVIOUS CONTROLS -->
 
             <!-- THUMBNAIL IMAGE CONTROLS -->
