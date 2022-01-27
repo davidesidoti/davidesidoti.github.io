@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37cb4725-eafb-42dc-94f1-0135aace9393" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/works/eqsolver/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/works/passwordgen/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +71,7 @@
       <workItem from="1640018217176" duration="2405000" />
       <workItem from="1640020802964" duration="6171000" />
       <workItem from="1643111719631" duration="1667000" />
+      <workItem from="1643319719326" duration="1054000" />
     </task>
     <servers />
   </component>
