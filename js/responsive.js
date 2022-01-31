@@ -5,7 +5,6 @@ $(document).ready(function () {
        else
            $(".navbar").removeClass("sticky");
 
-       console.log(this.scrollY);
        if (this.scrollY > 610)
            $("#progress-bar").addClass("progress-bar-fixed");
        else
