@@ -493,6 +493,19 @@ section {
     background: url(../images/tutorials/unity/how-to-jump-with-ui-buttons-3d.jpg) center;
     background-size: cover;
 }
+
+#progress-bar {
+    background-color: orangered;
+    height: 5px;
+    position: relative;
+}
+
+.progress-bar-fixed {
+    position: fixed !important;
+    top: 13.6%;
+    left: 0;
+    z-index: 1000;
+}
 /* TUTORIAL PAGE */
 
 /* TRYHACKME PAGES */
