@@ -5,17 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37cb4725-eafb-42dc-94f1-0135aace9393" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tutorials/install-wordpress/wp-25.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/it/tutorials/how-to-install-wordpress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/it/tutorials/how-to-install-wordpress/index.html" afterDir="false" />
     </list>
@@ -90,7 +79,7 @@
       <workItem from="1643319719326" duration="1081000" />
       <workItem from="1643664432883" duration="2033000" />
       <workItem from="1643699183054" duration="4039000" />
-      <workItem from="1643730018208" duration="2854000" />
+      <workItem from="1643730018208" duration="3059000" />
     </task>
     <servers />
   </component>
