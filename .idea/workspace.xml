@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37cb4725-eafb-42dc-94f1-0135aace9393" name="Changes" comment="">
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/it/tutorials/how-to-install-wordpress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/it/tutorials/how-to-install-wordpress/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/responsive.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/responsive.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +83,13 @@
       <workItem from="1643111719631" duration="1667000" />
       <workItem from="1643319719326" duration="1081000" />
       <workItem from="1643664432883" duration="2033000" />
+<<<<<<< Updated upstream
       <workItem from="1643699183054" duration="4039000" />
       <workItem from="1643730018208" duration="3314000" />
+=======
+      <workItem from="1643699183054" duration="4833000" />
+      <workItem from="1644305306856" duration="1966000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
