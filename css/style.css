@@ -519,8 +519,6 @@ section {
 /* WP TUTORIAL PAGE */
 .wp-tutorial-page .content-index {
     display: none;
-    border: 1px solid #000;
-    border-radius: 5px;
     padding: 30px 30px;
     z-index: 1000;
 }
